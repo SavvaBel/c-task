@@ -36,38 +36,143 @@
 // }
 
 
-Console.Write("Введите число от 1-7: ");
-int number = int.Parse(Console.ReadLine());
-if (number == 1) {
+// Console.Write("Введите число от 1-7: ");
+// int number = int.Parse(Console.ReadLine()!);
+// if (number == 1) {
 
-System.Console.WriteLine("Понедельник");
-}
-if (number == 2) {
+// System.Console.WriteLine("Понедельник");
+// }
+// if (number == 2) {
 
-System.Console.WriteLine("Вторник");
-}
-if (number == 3)
+// System.Console.WriteLine("Вторник");
+// }
+// if (number == 3)
+// {
+
+// System.Console.WriteLine("Среда");
+// }
+// if (number == 4)
+// {
+
+// System.Console.WriteLine("Четверг");
+// }
+// if (number == 5)
+// {
+
+// System.Console.WriteLine("Пятница");
+// }
+// if (number == 6)
+// {
+
+// System.Console.WriteLine("Суббота");
+// }
+// if (number == 7)
+// {
+
+// System.Console.WriteLine("Воскресенье");
+// }
+
+
+// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+// Например:
+// 78 -> 8
+// 12-> 2
+// 85 -> 8
+
+
+
+// int number = new Random().Next(10,100);
+// int a1 = number / 10;
+// int a2 = number % 10;
+// if (a1>a2)
+// {
+//     Console.WriteLine(a1);
+// }
+// else
+// {
+//     Console.WriteLine(a2);
+// }
+
+
+// Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.
+
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
+
+
+// int number = new Random().Next(100, 1000);
+// Console.WriteLine(number);
+// int number1 = number / 100;  // показавает 1 число
+// Console.WriteLine(number1);
+// int number2 = number % 100 / 10;  // показавает 2 число
+// Console.WriteLine(number2);   
+// int number3 = number % 10;  // показавает 3 число
+// Console.WriteLine(number3);
+// Console.WriteLine(number1 * 10 + number3);
+
+
+
+// int number = new Random().Next(100, 1000);
+// Console.WriteLine(number);
+// int A = number / 100;  // показавает 1 число
+// int B = number % 10;  // показавает 3 число
+// Console.WriteLine(A * 10 + B);
+
+
+
+// Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
+
+// 34, 5 -> не кратно, остаток 4
+// 16, 4 -> кратно
+
+
+// Console.WriteLine("Введите первое число");
+// int numberA = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите второе число");
+// int numberB = int.Parse(Console.ReadLine());
+// int numberC = numberB % numberA;
+// Console.WriteLine("Остаток от деления " + numberC);
+// if (numberC == 0)
+// {
+// Console.WriteLine("Второе число является кратным первому ");
+// }
+
+// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно
+// 7 и 23.
+
+// 14 -> нет
+// 46 -> нет
+// 161 -> да
+
+// Console.WriteLine("Ввести число ");
+// int A = Convert.ToInt32(Console.ReadLine());
+// if(A%7 == 0 && A%23 == 0)
+// {
+//     Console.WriteLine("Кратно");
+// }
+// else
+// {
+//     Console.WriteLine("Некратно");
+// }
+
+
+// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+
+// 5, 25 -> да
+// -4, 16 -> да
+// 25, 5 -> да
+// 8,9 -> нет
+Console.WriteLine("Ввести первое число ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввести второе число ");
+int B = Convert.ToInt32(Console.ReadLine());
+if(A == B*B || B == A*A)
 {
-
-System.Console.WriteLine("Среда");
+    Console.WriteLine("Кратно");
 }
-if (number == 4)
+else
 {
-
-System.Console.WriteLine("Четверг");
-}
-if (number == 5)
-{
-
-System.Console.WriteLine("Пятница");
-}
-if (number == 6)
-{
-
-System.Console.WriteLine("Суббота");
-}
-if (number == 7)
-{
-
-System.Console.WriteLine("Воскресенье");
+    Console.WriteLine("Некратно");
 }

@@ -64,14 +64,88 @@
 // 8 -> 2, 4, 6, 8
 
 
-Console.Write("Введите число: ");
-int x = int.Parse (Console.ReadLine()!);
-if (x == 5)
-{
-    Console.WriteLine("2,4");
-}
-if (x == 8)
-{
-    Console.WriteLine("2,4,6,8");
-}
 
+// Console.Write("Введите число: ");
+// int x = int.Parse (Console.ReadLine()!);
+// if (x == 5)
+// {
+//     Console.WriteLine("2,4");
+// }
+// if (x == 8)
+// {
+//     Console.WriteLine("2,4,6,8");
+// }
+
+
+
+
+
+
+// Д.з. второго семинара
+
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// int number = new Random().Next(100, 1000);
+// Console.WriteLine(number);
+
+// int A = number % 100 / 10;  // показавает 2 число
+// Console.WriteLine(A);   
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+
+// int number = new Random().Next(10, 1000);
+// Console.WriteLine(number);
+
+// int A = number % 10;  // показавает 3 число
+// if(number > 99)
+// {
+// Console.WriteLine(A);
+// }
+// else
+// {
+//     Console.WriteLine("Третьей цифры нет");
+// }
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.Write("Введите число от 1-7, где 1-5 будние дни; 6-7 выходные: ");
+int number = int.Parse(Console.ReadLine()!);
+if (number == 1) {
+System.Console.WriteLine("нет, будний");
+}if (number == 2) {
+System.Console.WriteLine("нет, будний");
+}
+if (number == 3)
+{
+System.Console.WriteLine("нет, будний");
+}
+if (number == 4)
+{
+System.Console.WriteLine("нет, будний");
+}
+if (number == 5)
+{
+System.Console.WriteLine("нет, будний");
+}
+if (number == 6)
+{
+System.Console.WriteLine("да, выходной");
+}
+if (number == 7)
+{
+System.Console.WriteLine("да, выходной");
+}
