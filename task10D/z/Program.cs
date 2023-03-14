@@ -164,14 +164,14 @@
 // {
 //     class Program
 //     {
- 
+
 //         static void Main(string[] args)
 //         {
 //             int num = int.Parse(Console.ReadLine());
 //             Console.WriteLine(IsPalindrome(num));
 //             Console.ReadKey(true);
 //         }
-        
+
 //         static bool IsPalindrome(int num)
 //         {
 //             if (num >= 0 && num <10)
@@ -188,7 +188,7 @@
 //             }
 //             return true;
 //         }
-        
+
 //         static int GetLength(int num)
 //         {
 //             int n = 0;
@@ -244,3 +244,100 @@
 //     Console.WriteLine(y);
 //     x++;
 // }
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+
+// int x = 5;
+// int stepen = 4;
+// Console.WriteLine("5^4 = " + Math.Pow(x, stepen));
+
+
+
+
+// using System;
+
+// namespace My3
+// {
+//      class Program
+//      {
+//           static void Main(string[] args)
+//           {
+//                Console.Write("Введите первое число: ");
+//                int N = int.Parse(Console.ReadLine());
+//                Console.Write("Введите второе число: ");
+//                int M = int.Parse(Console.ReadLine());
+//                int x = N;
+//                int stepen = M;
+               
+//                Console.WriteLine("Первое число в степени второго = " + Math.Pow(N, M));
+               
+               
+//                Console.ReadKey();
+//           }
+//      }
+// }
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
+
+// int FindLen(int a)
+// {
+//     int count = 0;
+//     int temp = a;
+//     while (temp > 0)
+//     {
+//         temp = temp / 10;
+//         count++;
+//     }
+// return count;
+// }
+
+// int a = int.Parse(Console.ReadLine());
+//             int s = 0;
+//             while (a > 0)
+//             {
+ 
+//                 s = s + a % 10;
+//                 a = a /10 ;
+ 
+//             }
+//  Console.WriteLine(s);
+
+
+void FillArray(int[] array) 
+int length = array.Length;
+
+for (int index = 0; index < length; index++)
+{
+array[index] = new Random().Next(0, 2);
+Console.Write(array[index] + " ");
+}
+}
+
+void PrintArray(int[] mas)
+{
+int len = mas.Length;
+for (int i = 0; i < len; i++)
+{
+Console.Write(mas[i] + " ");
+}
+}
+
+int[] arr = new int[8];
+FillArray(arr);
+Console.WriteLine();
+PrintArray(arr);
+

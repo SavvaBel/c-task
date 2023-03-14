@@ -263,43 +263,189 @@
 // }
 
 
-namespace CA_9
-{
-    class Program
-    {
+// namespace CA_9
+// {
+//     class Program
+//     {
  
-        static void Main(string[] args)
-        {
-            int num = int.Parse(Console.ReadLine());
-            Console.WriteLine(IsPalindrome(num));
-            Console.ReadKey(true);
-        }
+//         static void Main(string[] args)
+//         {
+//             int num = int.Parse(Console.ReadLine());
+//             Console.WriteLine(IsPalindrome(num));
+//             Console.ReadKey(true);
+//         }
         
-        static bool IsPalindrome(int num)
-        {
-            if (num >= 0 && num <10)
-                return true;
-            int numLength = GetLength(num);
-            int[] digits = new int[numLength];
-            for (int i = numLength - 1; i >= 0; i--) {
-                digits[i] = num % 10;
-                num /= 10;
-            }
-            for (int i = 0; i < numLength/2; i++) {
-                if (digits[i] != digits[numLength - i - 1])
-                    return false;
-            }
-            return true;
-        }
+//         static bool IsPalindrome(int num)
+//         {
+//             if (num >= 0 && num <10)
+//                 return true;
+//             int numLength = GetLength(num);
+//             int[] digits = new int[numLength];
+//             for (int i = numLength - 1; i >= 0; i--) {
+//                 digits[i] = num % 10;
+//                 num /= 10;
+//             }
+//             for (int i = 0; i < numLength/2; i++) {
+//                 if (digits[i] != digits[numLength - i - 1])
+//                     return false;
+//             }
+//             return true;
+//         }
         
-        static int GetLength(int num)
-        {
-            int n = 0;
-            while (num > 0) {
-                num /= 10;
-                n++;
-            }
-            return n;
-        }
-    }
+//         static int GetLength(int num)
+//         {
+//             int n = 0;
+//             while (num > 0) {
+//                 num /= 10;
+//                 n++;
+//             }
+//             return n;
+//         }
+//     }
+// }
+
+// Задача 19
+
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+
+// 12821 -> да
+
+// 23432 -> да
+
+// Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+// int GetSumNums(int number){
+//     int sum = 0;
+//     while (number > 0)
+//     {
+//         sum = sum + number;
+//         number--;
+//     }
+//     return sum;
+// }
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine());
+// Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
+
+
+// int GetSumNums(int number)
+// {
+// int sum = 0;
+// while (number > 0)
+// {
+// sum = sum + number;
+// number--;
+// }
+// return sum;
+// }
+
+// Console.Clear();
+// Console.Write("Введите числа: ");
+// int num = int.Parse(Console.ReadLine());
+// int num2 = int.Parse(Console.ReadLine());
+// int num3 = int.Parse(Console.ReadLine());
+
+// Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
+// Console.WriteLine($"Сумма цифр = {GetSumNums(num2)}");
+// Console.WriteLine($"Сумма цифр = {GetSumNums(num3)}");
+
+
+
+// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24
+// 5 -> 120
+
+// int Mult(int A)
+// {
+// int result = 1;
+// for (int i = 1; i <= A; i++)
+// {
+// result = result * i;
+// }
+// return result;
+
+// }
+// Console.Write("Введите число: ");
+// int A = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine($"произведение чисел равно: {Mult(A)}");
+
+// Задача 26: Напишите программу, которая принимает на вход число и выдаёт
+//количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+// int FindLen(int a)
+// {
+// int count = 0;
+// int temp = a;
+// while (temp > 0)
+// {
+// temp = temp / 10;
+// count++;
+// }
+// return count;
+
+// }
+
+// System.Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Ответ: {FindLen(a)}");
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+// void FillArray(int[] array)
+// {
+// int length = array.Length;
+
+// for (int index = 0; index < length; index++)
+// {
+// array[index] = new Random().Next(0, 2);
+// }
+// }
+
+// void PrintArray(int[] mas)
+// {
+// int len = mas.Length;
+// for (int i = 0; i < len; i++)
+// {
+// Console.Write(mas[i] + " ");
+// }
+// }
+
+// int[] arr = new int[8];
+// FillArray(arr);
+// PrintArray(arr);
+
+// + строка
+
+void FillArray(int[] array) 
+int length = array.Length;
+
+for (int index = 0; index < length; index++)
+{
+array[index] = new Random().Next(0, 2);
+Console.Write(array[index] + " ");
 }
+}
+
+void PrintArray(int[] mas)
+{
+int len = mas.Length;
+for (int i = 0; i < len; i++)
+{
+Console.Write(mas[i] + " ");
+}
+}
+
+int[] arr = new int[8];
+FillArray(arr);
+Console.WriteLine();
+PrintArray(arr);
